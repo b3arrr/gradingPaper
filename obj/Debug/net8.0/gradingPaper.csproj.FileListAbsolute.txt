@@ -1,0 +1,14 @@
+d:\programmering\C#\Projects\c#projects\gradingPaper\bin\Debug\net8.0\gradingPaper.exe
+d:\programmering\C#\Projects\c#projects\gradingPaper\bin\Debug\net8.0\gradingPaper.deps.json
+d:\programmering\C#\Projects\c#projects\gradingPaper\bin\Debug\net8.0\gradingPaper.runtimeconfig.json
+d:\programmering\C#\Projects\c#projects\gradingPaper\bin\Debug\net8.0\gradingPaper.dll
+d:\programmering\C#\Projects\c#projects\gradingPaper\bin\Debug\net8.0\gradingPaper.pdb
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\gradingPaper.GeneratedMSBuildEditorConfig.editorconfig
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\gradingPaper.AssemblyInfoInputs.cache
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\gradingPaper.AssemblyInfo.cs
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\gradingPaper.csproj.CoreCompileInputs.cache
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\gradingPaper.dll
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\refint\gradingPaper.dll
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\gradingPaper.pdb
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\gradingPaper.genruntimeconfig.cache
+d:\programmering\C#\Projects\c#projects\gradingPaper\obj\Debug\net8.0\ref\gradingPaper.dll
