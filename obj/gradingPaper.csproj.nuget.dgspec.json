@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\programmering\\C#\\Projects\\c#projects\\gradingPaper\\gradingPaper.csproj": {}
+    "C:\\Bjørnar\\Work\\Coding\\Learning\\C#\\c#projects\\gradingPaper\\gradingPaper.csproj": {}
   },
   "projects": {
-    "D:\\programmering\\C#\\Projects\\c#projects\\gradingPaper\\gradingPaper.csproj": {
+    "C:\\Bjørnar\\Work\\Coding\\Learning\\C#\\c#projects\\gradingPaper\\gradingPaper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\programmering\\C#\\Projects\\c#projects\\gradingPaper\\gradingPaper.csproj",
+        "projectUniqueName": "C:\\Bjørnar\\Work\\Coding\\Learning\\C#\\c#projects\\gradingPaper\\gradingPaper.csproj",
         "projectName": "gradingPaper",
-        "projectPath": "D:\\programmering\\C#\\Projects\\c#projects\\gradingPaper\\gradingPaper.csproj",
+        "projectPath": "C:\\Bjørnar\\Work\\Coding\\Learning\\C#\\c#projects\\gradingPaper\\gradingPaper.csproj",
         "packagesPath": "C:\\Users\\bjorn\\.nuget\\packages\\",
-        "outputPath": "D:\\programmering\\C#\\Projects\\c#projects\\gradingPaper\\obj\\",
+        "outputPath": "C:\\Bjørnar\\Work\\Coding\\Learning\\C#\\c#projects\\gradingPaper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bjorn\\AppData\\Roaming\\NuGet\\NuGet.Config"

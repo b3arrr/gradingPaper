@@ -2,165 +2,232 @@
 Program is created as a practice of creating, manipulating and referencing arrays.
 -The program holds student scores, calculates the sum of their score,
 averages it out and prints out a grade according to the
-average score of the student
+average score of the student.
+*/
+/*
+Update 14\02\2024
+-Added a local function "GradeResults" that automates the average grade of each student.
+-Added extra credits to the "GradeResults" function.
+-Added return value of the total grade number by adding the extra credit and the average grade. 
 */
 
-//declare arrays holding up to 5 integers in the memory.
-int[] sophiaScores = new int[5];
-int[] andrewScores = new int[5];
-int[] emmaScores = new int[5];
-int[] loganScores = new int[5];
-
-//initializes the array with the students grades.
-sophiaScores = [60,90,95,70,65]; 
-andrewScores = [70,90,77,99,96];
-emmaScores = [100,80,99,95,99];
-loganScores = [40,30,60,50,90];
-string[] grade = new string [4];
-
-
-int x = 0; //integer x created to run the if else loop within the foreach loop
- 
-//Array of the students names
-string[] names = {"Sophia", "Andrew", "Emma", "Logan"}; 
-
-//Foreach loop to find average student score based on xScores arrays
-foreach(string i in names)
+internal class Program
 {
-    int sum = 0; //Integer used to calculate final grade
-    int average = 0;
-    Console.WriteLine($"Adding scores for {names[x]}");
-    if(x == 0)
+
+    private static void Main(string[] args)
     {
-        foreach(int a in sophiaScores)
+        //new comment
+        //declare arrays holding up to 5 integers in the memory.
+        int[] sophiaScores = new int[5];
+        int[] andrewScores = new int[5];
+        int[] emmaScores = new int[5];
+        int[] loganScores = new int[5];
+
+        float[] numbersGrade = new float[5]; //Referencing the number grade
+        float[] averageGrade = new float[5];
+        float[] extraGrade = new float[5];
+
+        //initializes the array with the students grades.
+        sophiaScores = [60, 90, 95, 70, 65, 90, 70];
+        andrewScores = [70, 90, 77, 99, 96];
+        emmaScores = [100, 80, 99, 95, 99,90];
+        loganScores = [40, 30, 60, 50, 90,60,70,80];
+        string[] grade = new string[4];
+
+
+        int x = 0; //integer x created to run the if else loop within the foreach loop
+
+        //Array of the students names
+        string[] names = { "Sophia", "Andrew", "Emma", "Logan" };
+
+        //Foreach loop to find average student score based on xScores arrays
+        foreach (string i in names)
         {
-            
-            sum += a;
-            Console.WriteLine($"Sum of sophias scores = {sum}");
-            
+            float average = 0f;
+            float total = 0f;
+            float extra = 0f; 
+            Console.WriteLine($"Adding scores for {names[x]}");
+            if (x == 0)
+            {
+                (float averageScore, float totalScore, float extraPoints) results = GradesResults(sophiaScores);
+                total = results.totalScore;
+                average = results.averageScore;
+                extra = results.extraPoints;
+
+                numbersGrade[x] = total;
+                averageGrade[x] = average;
+                extraGrade[x] = extra;
+            }
+
+            else if (x == 1)
+            {
+               (float averageScore, float totalScore, float extraPoints) results = GradesResults(andrewScores);
+                total = results.totalScore;
+                average = results.averageScore;
+                extra = results.extraPoints;
+
+                numbersGrade[x] = total;
+                averageGrade[x] = average;
+                extraGrade[x] = extra;
+            }
+            else if (x == 2)
+            {
+                 (float averageScore, float totalScore, float extraPoints) results = GradesResults(emmaScores);
+                total = results.totalScore;
+                average = results.averageScore;
+                extra = results.extraPoints;
+
+                numbersGrade[x] = total;
+                averageGrade[x] = average;
+                extraGrade[x] = extra;
+            }
+            else
+            {
+                 (float averageScore, float totalScore, float extraPoints) results = GradesResults(loganScores);
+                total = results.totalScore;
+                average = results.averageScore;
+                extra = results.extraPoints;
+
+                numbersGrade[x] = total;
+                averageGrade[x] = average;
+                extraGrade[x] = extra;
+            }
+           
+            //Initialize grade array with a alphabetic grade to corresponding students.
+            if (total < 101 || total >= 0)
+            {
+                if (total <= 100 && total >= 97)
+                {
+                    grade[x] = "A+";
+                }
+                else if (total >= 93)
+                {
+                    grade[x] = "A";
+                }
+                else if (total >= 90)
+                {
+                    grade[x] = "A-";
+                }
+                else if (total >= 87)
+                {
+                    grade[x] = "B+";
+                }
+                else if (total >= 83)
+                {
+                    grade[x] = "B";
+                }
+                else if (total >= 80)
+                {
+                    grade[x] = "B-";
+                }
+                else if (total >= 77)
+                {
+                    grade[x] = "C+";
+                }
+                else if (total >= 73)
+                {
+                    grade[x] = "C";
+                }
+                else if (total >= 70)
+                {
+                    grade[x] = "C-";
+                }
+                else if (total >= 67)
+                {
+                    grade[x] = "D+";
+                }
+                else if (total >= 63)
+                {
+                    grade[x] = "D";
+                }
+                else if (total >= 60)
+                {
+                    grade[x] = "D-";
+                }
+                else if (total > 0)
+                {
+                    grade[x] = "F";
+                }
+                else
+                {
+                    Console.WriteLine("Grade indescribable)");
+                }
+
+            }
+
+            x++;
+
+
+
         }
+
+   
         
-        average  = sum / 5; 
-        Console.WriteLine($"Average grade of sophia is {average}\n");
-
-    }
-
-        else if(x == 1)
-    {
-            foreach(int a in andrewScores)
-            {
-                
-                sum += a;
-                Console.WriteLine($"Sum of Andrew scores = {sum}");
-                
-            }
-
-        average = sum / 5; 
-        Console.WriteLine($"Average grade of Andrew is {average}\n");
-    }
-        else if(x == 2)
-    {
-            foreach(int a in emmaScores)
-            {
-                
-                sum += a;
-                Console.WriteLine($"Sum of Emma scores = {sum}");
-                
-            }
-
-        average = sum / 5; 
-        Console.WriteLine($"Average grade of Emma is {average}\n");
-    }
-        else
-    {
-            foreach(int a in loganScores)
-            {
-                
-                sum += a;
-                Console.WriteLine($"Sum of Logan scores = {sum}");
-                
-            }
-
-        average = sum / 5; 
-        Console.WriteLine($"Average grade of Logan is {average}\n");
-        
-    }
-    
-    if(average <101 || average >= 0)
-{
-	if(average<=100 && average >= 97)
-	{
-		grade[x] = "A+";
-	}
-    else if(average >= 93)
-    {
-        grade[x] = "A";
-    }
-    else if(average>=90)
-    {
-        grade[x] = "A-";    
-    }
-    else if(average>=87)
-    {
-        grade[x] = "B+";
-    }
-    else if(average>=83)
-    {
-        grade[x] = "B";
-    }
-    else if(average>=80)
-    {
-        grade[x] = "B-";
-    }
-    else if(average>=77)
-    {
-        grade[x] = "C+";
-    }
-    else if(average>= 73)
-    {
-        grade[x] = "C";
-    }
-    else if(average>= 70)
-    {
-        grade[x] = "C-";
-    }
-    else if(average>=67)
-    {
-        grade[x] = "D+";
-    }
-    else if(average>=63)
-    {
-        grade[x] = "D";
-    }
-    else if(average>=60)
-    {
-        grade[x] = "D-";
-    }
-    else if(average>0)
-    {
-        grade[x] = "F";
-    }
-    else
-    {
-        Console.WriteLine("Grade indescribable)");
-    }
-
-}
-
-    x++;
-
-    
-
-}
 
 
 
-Console.WriteLine($"Student\t\tGrade\n\n{names[0]}:\t\t92.2\t{grade[0]}");
-Console.WriteLine($"{names[1]}:\t\t89.6\t{grade[1]}");
-Console.WriteLine($"{names[2]}:\t\t85.6\t{grade[2]}");
-Console.WriteLine($"{names[3]}:\t\t91.2\t{grade[3]}");
+        Console.WriteLine($"Student\t\tGrade\tOverall Grade\tExtra Credit\n\n" +
+                  $"{names[0]}:\t\t{averageGrade[0]:F1}\t{numbersGrade[0]:F1}\t{grade[0]}\t{averageGrade[0]:F1}({extraGrade[0]:F1})points");
+Console.WriteLine($"{names[1]}:\t\t{averageGrade[1]:F1}\t{numbersGrade[1]:F1}\t{grade[1]}\t{averageGrade[1]:F1}({extraGrade[1]:F1})points");
+Console.WriteLine($"{names[2]}:\t\t{averageGrade[2]:F1}\t{numbersGrade[2]:F1}\t{grade[2]}\t{averageGrade[2]:F1}({extraGrade[2]:F1})points");
+Console.WriteLine($"{names[3]}:\t\t{averageGrade[3]:F1}\t{numbersGrade[3]:F1}\t{grade[3]}\t{averageGrade[3]:F1}({extraGrade[3]:F1})points");
 Console.WriteLine("\n\rPress any key to continue");
 Console.ReadLine();
 
+    }
 
 
+
+
+
+
+
+
+
+
+       //Function GradeResults, automates the average grade, total grade, and how much extra points was added to the grade.
+       static (float averageScore, float totalScore, float extraPoints) GradesResults(int[] scores)
+
+            {
+                float sum = 0f; // used to calculate final grade
+                float averageScore  = 0f; //Average decleration for function
+                float totalScore = 0f; //Used as the totalScore grade score included with extra credits
+                float extraPoints = 0f;
+        
+        
+        foreach (int a in scores)
+                    {
+                        sum += a;
+                        Console.WriteLine($"Sum of sophias scores = {sum}");
+                    }
+                 averageScore = sum / scores.Length;
+                 Console.WriteLine($"Average grade of student is {averageScore}\n");
+                 totalScore = averageScore;
+       
+ 
+       
+            if(scores.Length >=8)
+            {
+                totalScore += 3f;
+            }
+            else if(scores.Length >=7)
+            {
+                totalScore +=2f;
+            }
+            else if(scores.Length >=6)
+            {
+                totalScore +=1f;
+            }
+            extraPoints = totalScore % averageScore; 
+
+            Console.Write("The students has " + extraPoints + " extra points\n\n\n");
+        
+
+                 
+                return (averageScore, totalScore, extraPoints);
+                 
+            
+}
+
+
+}
