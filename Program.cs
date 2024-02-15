@@ -10,6 +10,10 @@ Update 14\02\2024
 -Added extra credits to the "GradeResults" function.
 -Added return value of the total grade number by adding the extra credit and the average grade. 
 */
+/*
+Update 15\02\2024
+-Looped the final grading output showing students names, grade, overall grade, and extra credit
+*/
 
 internal class Program
 {
@@ -43,54 +47,40 @@ internal class Program
         //Foreach loop to find average student score based on xScores arrays
         foreach (string i in names)
         {
-            float average = 0f;
             float total = 0f;
-            float extra = 0f; 
             Console.WriteLine($"Adding scores for {names[x]}");
             if (x == 0)
             {
                 (float averageScore, float totalScore, float extraPoints) results = GradesResults(sophiaScores);
-                total = results.totalScore;
-                average = results.averageScore;
-                extra = results.extraPoints;
-
+                 total = results.totalScore;
+                averageGrade[x] = results.averageScore;
+                extraGrade[x] = results.extraPoints;
                 numbersGrade[x] = total;
-                averageGrade[x] = average;
-                extraGrade[x] = extra;
             }
 
             else if (x == 1)
             {
                (float averageScore, float totalScore, float extraPoints) results = GradesResults(andrewScores);
                 total = results.totalScore;
-                average = results.averageScore;
-                extra = results.extraPoints;
-
+                averageGrade[x] = results.averageScore;
+                extraGrade[x] = results.extraPoints;
                 numbersGrade[x] = total;
-                averageGrade[x] = average;
-                extraGrade[x] = extra;
             }
             else if (x == 2)
             {
                  (float averageScore, float totalScore, float extraPoints) results = GradesResults(emmaScores);
                 total = results.totalScore;
-                average = results.averageScore;
-                extra = results.extraPoints;
-
+                averageGrade[x] = results.averageScore;
+                extraGrade[x] = results.extraPoints;
                 numbersGrade[x] = total;
-                averageGrade[x] = average;
-                extraGrade[x] = extra;
             }
             else
             {
                  (float averageScore, float totalScore, float extraPoints) results = GradesResults(loganScores);
-                total = results.totalScore;
-                average = results.averageScore;
-                extra = results.extraPoints;
-
+                 total = results.totalScore;
+                averageGrade[x] = results.averageScore;
+                extraGrade[x] = results.extraPoints;
                 numbersGrade[x] = total;
-                averageGrade[x] = average;
-                extraGrade[x] = extra;
             }
            
             //Initialize grade array with a alphabetic grade to corresponding students.
@@ -161,18 +151,8 @@ internal class Program
 
         }
 
-   
-        
+        finalResults(names, averageGrade,numbersGrade,grade, extraGrade); //calls finalResults function
 
-
-
-        Console.WriteLine($"Student\t\tGrade\tOverall Grade\tExtra Credit\n\n" +
-                  $"{names[0]}:\t\t{averageGrade[0]:F1}\t{numbersGrade[0]:F1}\t{grade[0]}\t{averageGrade[0]:F1}({extraGrade[0]:F1})points");
-Console.WriteLine($"{names[1]}:\t\t{averageGrade[1]:F1}\t{numbersGrade[1]:F1}\t{grade[1]}\t{averageGrade[1]:F1}({extraGrade[1]:F1})points");
-Console.WriteLine($"{names[2]}:\t\t{averageGrade[2]:F1}\t{numbersGrade[2]:F1}\t{grade[2]}\t{averageGrade[2]:F1}({extraGrade[2]:F1})points");
-Console.WriteLine($"{names[3]}:\t\t{averageGrade[3]:F1}\t{numbersGrade[3]:F1}\t{grade[3]}\t{averageGrade[3]:F1}({extraGrade[3]:F1})points");
-Console.WriteLine("\n\rPress any key to continue");
-Console.ReadLine();
 
     }
 
@@ -185,6 +165,22 @@ Console.ReadLine();
 
 
 
+
+
+        //Function finalResults, that prints out the grade for the students automaticly. 
+        static void finalResults(string[] names, float[] averageGrade, float[] numbersGrade, string[] grade, float[]extraGrade)
+        {
+                   
+        Console.WriteLine($"Student\t\tGrade\tOverall Grade\tExtra Credit\n\n");
+        for(int i = 0; i < names.Length; i++)
+        {
+              
+            Console.WriteLine($"{names[i]}:\t\t{averageGrade[i]:F1}\t{numbersGrade[i]:F1}\t{grade[i]}\t{averageGrade[i]:F1}({extraGrade[i]:F1})points");
+
+        }
+        }
+       
+      
        //Function GradeResults, automates the average grade, total grade, and how much extra points was added to the grade.
        static (float averageScore, float totalScore, float extraPoints) GradesResults(int[] scores)
 
@@ -192,7 +188,7 @@ Console.ReadLine();
                 float sum = 0f; // used to calculate final grade
                 float averageScore  = 0f; //Average decleration for function
                 float totalScore = 0f; //Used as the totalScore grade score included with extra credits
-                float extraPoints = 0f;
+                float extraPoints = 0f; //How many extra points each student has
         
         
         foreach (int a in scores)

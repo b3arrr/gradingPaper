@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gradingPaper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75594f8c1435ce03de49d471b3545d151feb7f2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f0938052fc32686377e274d62da29a9372cecd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("gradingPaper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gradingPaper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

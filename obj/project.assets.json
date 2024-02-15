@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Bjørnar\\Work\\Coding\\Learning\\C#\\c#projects\\gradingPaper\\gradingPaper.csproj",
+      "projectUniqueName": "C:\\Users\\bjorn\\Documents\\GitHub\\gradingPaper\\gradingPaper.csproj",
       "projectName": "gradingPaper",
-      "projectPath": "C:\\Bjørnar\\Work\\Coding\\Learning\\C#\\c#projects\\gradingPaper\\gradingPaper.csproj",
+      "projectPath": "C:\\Users\\bjorn\\Documents\\GitHub\\gradingPaper\\gradingPaper.csproj",
       "packagesPath": "C:\\Users\\bjorn\\.nuget\\packages\\",
-      "outputPath": "C:\\Bjørnar\\Work\\Coding\\Learning\\C#\\c#projects\\gradingPaper\\obj\\",
+      "outputPath": "C:\\Users\\bjorn\\Documents\\GitHub\\gradingPaper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bjorn\\AppData\\Roaming\\NuGet\\NuGet.Config"
